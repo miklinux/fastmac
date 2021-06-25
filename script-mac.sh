@@ -14,7 +14,8 @@ EOF
 
 # configure e2e setup script
 cat << EOF > ~/e2e-setup.sh
-git config credential.helper store
+#!/bin/bash
+git config --global credential.helper store
 read -p "GitHub username: " GIT_USER
 read -p "GitHub token: " GIT_TOKEN
 echo "https://\${GIT_USER}:\${GIT_TOKEN}@github.com" > ~/.git-credentials
