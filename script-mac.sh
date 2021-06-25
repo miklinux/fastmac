@@ -17,7 +17,7 @@ cat << EOF > ~/e2e-setup.sh
 git config credential.helper store
 read -p "GitHub username: " GIT_USER
 read -p "GitHub token: " GIT_TOKEN
-echo "https://${GIT_USER}:${GIT_TOKEN}@github.com" > ~/.git-credentials
+echo "https://\${GIT_USER}:\${GIT_TOKEN}@github.com" > ~/.git-credentials
 chmod 600 ~/.git-credentials
 git clone https://github.com/miklinux/docker-exads-e2e.git
 cd docker-exads-e2e
